@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AdminPage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p>Admin Page</p>
+    <div><h1>Hello, admin!</h1></div>
+    <div>
+        {{#user}}
+            <div>
+                <b>{{id}}</b>
+                <span>{{username}}</span>
+                <i>{{active}}</i>
+            </div>
+        {{/user}}
+    </div>
+</body>
+</html>
