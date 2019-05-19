@@ -13,8 +13,17 @@ public class Message {
     private Integer id;
 
     private String text;
-
     private String tag;
+
+    private User author;
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
 
     public Message() {
     }

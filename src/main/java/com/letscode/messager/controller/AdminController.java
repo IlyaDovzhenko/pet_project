@@ -11,6 +11,7 @@ import java.util.Map;
 @Controller
 public class AdminController {
 
+    //todo: Change to constructor injection
     @Autowired
     private UserRepository userRepository;
 
@@ -20,5 +21,7 @@ public class AdminController {
         model.put("user", allUsers);
         return "admin";
     }
+
+    //todo: Add PostMapping and and some logic
 
 }
