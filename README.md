@@ -5,8 +5,8 @@ It takes a little time to decide what it will be
 ## Table of contents
 - [Introduction](#introduction)
 - [Install](#install)
-   - [withDocker](#withDocker)
-   - [withoutDocker](#withoutDocker)
+   - [With Docker](#withDocker)
+   - [Without Docker](#withoutDocker)
 - [API](#api)
 
 ## Introduction <a name="introduction"></a>
