@@ -11,8 +11,6 @@ import java.util.Map;
 @Controller
 public class AdminController {
 
-    //todo: Change to constructor injection
-    @Autowired
     private UserRepository userRepository;
 
     @GetMapping("/admin")
@@ -22,6 +20,11 @@ public class AdminController {
         return "admin";
     }
 
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
     //todo: Add PostMapping and and some logic
 
 }

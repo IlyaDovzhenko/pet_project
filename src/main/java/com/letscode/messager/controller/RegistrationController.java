@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Controller
 public class RegistrationController {
-    @Autowired
+
     private UserRepository userRepository;
 
     @GetMapping("/registration")
@@ -35,6 +35,11 @@ public class RegistrationController {
         userRepository.save(user);
 
         return "redirect:/login";
+    }
+
+    @Autowired
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
 

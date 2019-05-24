@@ -5,6 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+    <div>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}" />
+            <input type="submit" value="Sign Out" />
+        </form>
+    </div>
     <p>Admin Page</p>
     <div><h1>Hello, admin!</h1></div>
     <div>

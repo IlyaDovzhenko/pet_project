@@ -13,7 +13,6 @@ import java.util.Map;
 @Controller
 public class MainController {
 
-    @Autowired
     private MessageRepository messageRepository;
 
     @GetMapping("/")
@@ -53,6 +52,11 @@ public class MainController {
         model.put("messages", messages);
 
         return "main";
+    }
+
+    @Autowired
+    public void setMessageRepository(MessageRepository messageRepository) {
+        this.messageRepository = messageRepository;
     }
 
 }
