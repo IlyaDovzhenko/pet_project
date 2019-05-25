@@ -1,8 +1,10 @@
 package com.letscode.messager.controller;
 
 import com.letscode.messager.domain.Message;
+import com.letscode.messager.domain.User;
 import com.letscode.messager.repos.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,9 +30,14 @@ public class MainController {
     }
 
     @PostMapping("/main")
-    public String addMessage(@RequestParam String newMessage, @RequestParam String tag, Map<String, Object> model) {
+    public String add(
+            @AuthenticationPrincipal User author,
+            @RequestParam String newMessage,
+            @RequestParam String tag,
+            Map<String, Object> model
+    ) {
 
-        Message message = new Message(newMessage, tag);
+        Message message = new Message(newMessage, tag, author);
         messageRepository.save(message);
 
         Iterable<Message> allMessages = messageRepository.findAll();
