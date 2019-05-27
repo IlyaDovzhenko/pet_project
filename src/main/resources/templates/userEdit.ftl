@@ -6,7 +6,7 @@
     <span><a href="user">User list</a></span>
     <h3>User editor</h3>
     <form action="/user" method="post">
-        <input type="text" name="username" value=""${user.username}>
+        <input type="text" name="username" value="${user.username}" />
         <#list roles as role>
             <div>
                 <label>
@@ -17,8 +17,8 @@
                 </label>
             </div>
         </#list>
-        <input type="text" value="${user.id}" name="userId" >
-        <input type="text" value="${_csrf.token}" name="_csrf">
+        <input type="hidden" value="${user.id}" name="userId" >
+        <input type="hidden" value="${_csrf.token}" name="_csrf">
         <button type="submit">Save</button>
     </form>
 
