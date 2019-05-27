@@ -4,6 +4,7 @@
 <@common.page>
     <div>
         <@logout_form.logout "/logout" />
+        <span><a href="user">User list</a></span>
     </div>
     <div>
         <form action="/main" method="post">
