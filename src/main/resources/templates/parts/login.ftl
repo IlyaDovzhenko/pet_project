@@ -16,9 +16,21 @@
     </form>
 </#macro>
 
-<#macro logout path>
+<#macro logout_button path>
     <form action="${path}" method="post">
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <input class="btn btn-primary ml-2" type="submit" value="Sign out" />
+    </form>
+</#macro>
+<#macro login_button path>
+    <form action="${path}" method="post">
+        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+        <input class="btn btn-primary ml-2" type="submit" value="Sign in" />
+    </form>
+</#macro>
+<#macro registration_button path>
+    <form action="${path}" method="post">
+        <input type="hidden" name="_csrf" value="${_csrf.token}" />
+        <input class="btn btn-primary ml-2" type="submit" value="Sign up" />
     </form>
 </#macro>

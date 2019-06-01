@@ -1,5 +1,5 @@
 <#include "security.ftl">
-<#import "login.ftl" as logout>
+<#import "login.ftl" as login>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Messager</a>
@@ -22,8 +22,17 @@
             </#if>
         </ul>
         <div class="navbar-text">${name}</div>
-        <div>
-            <@logout.logout "/logout" />
-        </div>
+        <#if name != "unknown">
+            <div>
+                <@login.logout_button "/logout" />
+            </div>
+        <#else>
+            <div>
+                <@login.registration_button "/registration" />
+            </div>
+            <div>
+                <@login.login_button "/login" />
+            </div>
+        </#if>
     </div>
 </nav>
