@@ -3,6 +3,6 @@
 
 <@common.page>
     <h3>Add new user.</h3>
-    ${message}
+    ${message?ifExists}
     <@login_form.login "/registration" />
 </@common.page>
