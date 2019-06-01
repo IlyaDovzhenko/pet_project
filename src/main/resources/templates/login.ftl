@@ -3,6 +3,5 @@
 
 <@common.page>
     <h3>Login, please.</h3>
-    <@login_form.login "/login" />
-    <a href="/registration">Add new user.</a>
+    <@login_form.login "/login" false/>
 </@common.page>

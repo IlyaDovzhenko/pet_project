@@ -4,5 +4,5 @@
 <@common.page>
     <h3>Add new user.</h3>
     ${message?ifExists}
-    <@login_form.login "/registration" />
+    <@login_form.login "/registration" true/>
 </@common.page>

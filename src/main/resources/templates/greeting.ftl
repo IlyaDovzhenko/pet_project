@@ -1,5 +1,15 @@
 <#import "parts/common.ftl" as common>
 
 <@common.page>
-<h3>Hello, user!</h3>
+    <div class="row">
+        <div class="col-sm">
+            <p>Hello, user!</p>
+        </div>
+        <div class="col-sm">
+            <p>Hello, user!</p>
+        </div>
+        <div class="col-sm" >
+            <p>Hello, user!</p>
+        </div>
+    </div>
  </@common.page>

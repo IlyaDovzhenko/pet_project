@@ -1,4 +1,5 @@
 <#include "security.ftl">
+<#import "login.ftl" as logout>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="/">Messager</a>
@@ -21,5 +22,8 @@
             </#if>
         </ul>
         <div class="navbar-text">${name}</div>
+        <div>
+            <@logout.logout "/logout" />
+        </div>
     </div>
 </nav>

@@ -2,11 +2,8 @@
 <#import "parts/login.ftl" as logout_form>
 
 <@common.page>
-    <div>
-        <@logout_form.logout "/logout" />
-        <span><a href="user">User list</a></span>
-    </div>
-    <div>
+    <h3>Main page</h3>
+    <div class="mt-3">
         <form action="/main" method="post">
             <input type="text" name="newMessage" placeholder="Enter new message" />
             <input type="text" name="tag" placeholder="Tag" />
@@ -14,13 +11,14 @@
             <button type="submit">Add</button>
         </form>
     </div>
-    <div>List of messages: </div>
-    <div>
+    <div class="mt-3 mb-3">
         <form action="/main" method="get">
             <input type="text" name="filter" value="${filter?ifExists}" />
             <button type="submit">Find</button>
         </form>
     </div>
+
+    <div>List of messages: </div>
 
     <#list messages as message>
         <div>
